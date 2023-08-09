@@ -49,6 +49,7 @@ function App() {
           onChange={changeHandler}
           name="firstName"
           value={formData.firstname}
+          className='Outline'
           />
         <br/> 
         <br></br>
@@ -60,6 +61,7 @@ function App() {
           onChange={changeHandler}
           name="lastName"
           value={formData.lastName}
+          className='Outline'
           /> 
         <br/> 
         <br></br>
@@ -71,6 +73,7 @@ function App() {
           onChange={changeHandler}
           name="email"
           value={formData.email}
+          className='Outline'
           />  
           <br/>
 
@@ -146,9 +149,11 @@ function App() {
 
           <br/> 
         <br></br>
-        <label htmlFor='byemail'>By Email</label>
+        <fieldset>
+        <legend>By Email</legend>
         <br/>
         <br></br>
+        <div className='flex'>
         <input
           type="checkbox"
           onChange={changeHandler}
@@ -156,10 +161,14 @@ function App() {
           id="comments2"
           checked={formData.comments2}
           />
+          <div>
           <label htmlFor='comments2'>Comments</label>
                     
           <p>Get notified when someone posts a comment on a posting</p>
+          </div>
+          </div>
           <br></br>
+          <div className='flex'>
           <input
           type="checkbox"
           onChange={changeHandler}
@@ -167,10 +176,14 @@ function App() {
           id="candidates"
           checked={formData.candidates}
           />
+          <div>
           <label htmlFor='candidates'>Candidates</label>
           
           <p>Get notified when a candidate applies for a job </p>
+          </div>
+          </div>
           <br></br>
+          <div className='flex'>
           <input
           type="checkbox"
           onChange={changeHandler}
@@ -178,11 +191,16 @@ function App() {
           id="offers"
           checked={formData.offers}
           />
+          <div>
           <label htmlFor='offers'>Offers</label>
           
           <p>Get notified when someone posts a comment on a posting</p>
+          </div>
+          </div>
           <br></br>
-          <label htmlFor='notifications'>Push Notifications</label>
+          </fieldset>
+          <fieldset>
+          <legend>Push Notifications</legend>
           <br></br>
           <p>These are delivered via SMS to your mobile phone</p>
        
@@ -216,6 +234,7 @@ function App() {
           checked = {formData.mode == "nopushnotifications"}
           /> 
           <label htmlFor='nopushnotifications'>No Push Notifications</label>
+          </fieldset>
           <br></br>
           <br></br>
           {/* <input type='Submit' value= 'Submit'/> */}
